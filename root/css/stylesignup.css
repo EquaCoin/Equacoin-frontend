@@ -1,0 +1,787 @@
+/* * {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html, body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Open Sans', sans-serif;
+}
+.f_left {
+	float: left!important;
+}
+.f_right {
+	float: right!important;
+}
+.m_top1 {
+	margin-top: 10px;
+}
+.m_top2 {
+	margin-top: 20px;
+}
+.m_top3 {
+	margin-top: 30px;
+}
+.m_top70 {
+	margin-top: 70px;
+}
+.m_bot1 {
+	margin-bottom: 10px;
+}
+.m_top2 {
+	margin-bottom: 20px;
+}
+.m_top3 {
+	margin-bottom: 30px;
+}
+.m_top70 {
+	margin-bottom: 70px;
+}
+.com {
+	float: left;
+	width: 100%;
+}
+.wrapper {
+	max-width: 960px;
+	width: 100%;
+	margin: 0 auto;
+}
+.text_center {
+	float: left;
+	width: 100%;
+	text-align: center;
+}
+.text_left {
+	float: left;
+	width: 100%;
+	text-align: left;
+}
+.text_right {
+	float: left;
+	width: 100%;
+	text-align: right;
+}
+.white_text {
+	color: white;
+}
+.black_text {
+	color: black;
+}
+.white_bg {
+	background: #bfc0c4;
+}*/
+.time-remaining {
+	padding: 5px;
+	margin: 10px 0 20px 0;
+	text-align: center;
+	color: #ffffff;
+	font-size: 24px;
+	font-weight: 600;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	width: 50%;
+	margin-left: 27%;
+}
+ul {
+	list-style-type: none;
+	margin-bottom: 0;
+	margin-left: 0;
+}
+.timenumbers {
+	display: block;
+	font-family: "Univers LT Std", sans-serif;
+	font-size: 2em;
+	line-height: 1.5;
+	margin: 0 auto;
+	text-align: center;
+	background: red;
+	border-radius: 50px;
+	padding: 15%;
+	box-sizing: border-box;
+}
+.timedescription {
+	font-family: "Univers LT Std", sans-serif;
+	font-size: 1.3em;
+	font-variant: small-caps;
+	line-height: 1.5;
+	margin: 0 auto;
+	text-align: center;
+	position: relative;
+	top: -25px;
+}
+.bg {
+	background: url(../images/header.jpg) no-repeat center center/cover;
+	min-height: 840px;
+}
+.landing-logo {
+	padding: 30px 0px;
+}
+.equacoin-contnt h2 {
+	font-size: 28px;
+	margin: 0;
+	font-weight: bold;
+}
+.equacoin-contnt h3 {
+	font-size: 16px;
+	line-height: 26px;
+}
+.equacoin-contnt h4 {
+	font-size: 24px;
+	margin: 20px 0;
+}
+.equacoin-contnt p {
+	text-align: justify;
+	font-size: 16px;
+	line-height: 26px;
+}
+.equacoin-contnt p a {
+	color: #F68922 !important;
+    font-weight: 500;
+    padding: 4px 6px;
+    display: inline-block;
+}
+.social-link{margin-top:20px;}
+.social-link ul {
+	margin: 0;
+	padding: 0;
+}
+.social-link ul li {
+	display: inline-block;
+}
+.social-link ul li a {
+	display: block;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	border-radius: 50%;
+	margin: 0 10px 0px 0px;
+	transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	font-size: 30px;
+	color:#ffffff
+}
+.social-link ul li a:hover {
+	background: #F68922;
+	color: #ffffff;
+}
+.social-link ul li 
+.more-bttn {
+	margin: 36px 0;
+}
+.more-bttn a {
+	background: #F68922;
+	font-size: 16px;
+	margin: 0 20px 0 0;
+	width: 150px;
+	border-radius: 50px;
+	padding: 12px 0px;
+	text-align: center;
+	text-transform: uppercase;
+	transition: 0.5s ease;
+	-webkit-transition: 0.5s ease;
+	-moz-transition: 0.5s ease;
+	color:#ffffff;
+}
+.more-bttn a:hover {
+	background: transparent;
+	border: 1px solid #ffffff;
+	color: #ffffff;
+}
+.loing-landing-section {
+	float: left;
+	width: 100%;
+	padding-top: 30px;
+	display: -webkit-flex;
+	-webkit-align-items: center;
+	display: flex;
+	align-items: center;
+}
+.login-seciton {
+	padding: 36px 50px;
+	border-radius: 0.625rem;
+	box-shadow: 0 0 0 0.1875rem rgba(51, 51, 51, 0.2);
+}
+.bg-contrast {
+	background: rgba(255,255,255,0.7);
+	float: left;
+	width: 100%;
+	overflow: hidden;
+}
+.login-title h1 {
+	color: #29235f;
+	font-size: 36px;
+	font-weight: bold;
+	margin: 16px 0;
+}
+.login-title-token h1 {
+	font-size: 24px;
+	font-weight: 400;
+	color: #29235f;
+	letter-spacing: 1px;
+	margin: 14px 0px 20px;
+}
+.m-bot6{margin-bottom: 6px;}
+.login-bttn button {
+	background: #F68922;
+	margin-top: 0px;
+	border: none;
+	text-transform: capitalize;
+	font-size: 20px;
+	color: #ffffff;
+}
+.login-bttn button:hover {
+	background: #F68922;
+	color: #ffffff;
+}
+.login-page-footer {
+	margin-top: 20px;
+}
+.form-group label {
+	text-transform: capitalize;
+}
+.team-icon {
+	position: fixed;
+	top: 40%;
+	left: 0;
+	z-index: 1;
+}
+.team-icon-pos {
+	background: rgba(255,255,255,0.9);
+	padding: 12px;
+	display: block;
+	position: relative;
+}
+.tool-tip {
+	visibility: hidden;
+	width: 120px;
+	background-color: #ffffff;
+	color: #000000;
+	text-align: center;
+	border-radius: 6px;
+	padding: 5px 0;
+	position: absolute;
+	z-index: 1;
+	top: 17px;
+	left: 110%;
+	font-size: 16px;
+}
+.team-icon-pos .tool-tip::after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	right: 100%;
+	margin-top: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: transparent #ffffff transparent transparent;
+}
+.team-icon-pos:hover .tool-tip {
+	visibility: visible;
+	opacity: 1;
+}
+.team-icon-pos a {
+	color: #000000 !important;
+	text-decoration: none;
+}
+.team-modal {
+	text-align: center;
+}
+.team-modal .modal {
+	background: rgba(0,0,0,0.8);
+}
+.team-modal .modal .modal-dialog {
+	width: 1170px;
+}
+
+.modal-header h3 {
+	text-align: center;
+	text-transform: uppercase;
+}
+.team-modal .modal-body {
+	overflow: hidden;
+	height: 550px;
+	overflow-y: auto;
+}
+.team-section {
+	float: left;
+	width: 100%;
+	margin-bottom: 20px;
+	display: flex;
+	align-items: center;
+	-webkit-align-items: center;
+	-moz-align-items: center;
+}
+.team-image img {
+	width: 160px;
+	display: block;
+}
+.team-member {
+	margin-bottom: 20px;
+	text-align: left;
+}
+.team-member h2 {
+	font-size: 18px;
+	color: #F68922;
+}
+.team-member p {
+	text-align: justify;
+	font-size: 16px;
+	line-height: 26px;
+}
+.team-member a.link-more {
+	color: #F68922 !important;
+	font-weight: 500;
+}
+.team-member img {
+	width: 150px;
+}
+.login-seciton .simple-token-form .form-group > label {
+	text-transform: uppercase;
+	letter-spacing: 0px;
+	font-size: 12px;
+}
+.time-remain-div ul li {
+	margin: 0 40px;
+}
+.time-remain-div ul li span {
+	margin-bottom: 30px;
+	display: block;
+	font-family: "Univers LT Std", sans-serif;
+	font-size: 2em;
+	line-height: 1.5;
+	text-align: center;
+	background: red;
+	width: 90px;
+	height: 90px;
+	line-height: 90px;
+	border-radius: 50%;
+}
+.days-cunt {
+	margin-left: 26px;
+}
+.time-remain-div ul li p {
+	text-align: center;
+	margin-left: 10px;
+}
+.login-seciton .simple-token-form .form-group{
+	margin-bottom: 15px
+}
+.login-seciton .simple-token-form .form-group p{
+	margin-top: 2px;
+    position: absolute;
+    font-size: 12px;
+}
+.login-seciton .simple-token-form .form-group .form-control {
+	height: auto;
+}
+.login-seciton .simple-token-form .form-group .form-control:focus{
+	border:1px solid #F68922;
+}
+.abstract-aboutus .modal {
+	background: #121212;
+}
+.abstract-aboutus .modal-header h4 {
+	color: #f09e38;
+	text-align: center;
+	font-size: 26px;
+	text-transform: uppercase;
+}
+.about-us-content p {
+	color: #000000;
+	font-size: 16px;
+	line-height: 28px;
+	font-weight: normal;
+	margin-bottom: 16px;
+}
+.Purchase-eqc .modal{background:rgba(0,0,0,0.8);}
+.Purchase-eqc .modal .modal-dialog{width: 600px;}
+.Purchase-eqc .modal .modal-dialog .modal-header{padding:8px 15px;}
+.Purchase-eqc .modal .modal-dialog .modal-header h4 {
+	color: #f09e38;
+	text-align: left;
+	font-size: 18px;
+	text-transform: uppercase;
+}
+.Purchase-content ul{padding:0;}
+.Purchase-content ul li{
+	font-size: 14px;
+    font-weight: 600;
+    color: #333333;
+    margin-top: 16px;
+    position: relative;
+	padding-left: 28px;
+	line-height: 24px;
+}
+.Purchase-content ul li:before{
+	content: "\f0a9";
+    font-family: 'FontAwesome';
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 18px;
+    color: #2A2460;
+}
+.Purchase-content ul li a{color:#f09e38;}
+/*------Navbar-----*/
+.equacoin-navbar .navbar-inverse {
+	background: transparent;
+	border: none;
+	padding: 20px 0;
+	margin-bottom: 0;
+}
+.equacoin-navbar .navbar-inverse .navbar-header .navbar-brand {
+	padding: 0;
+}
+.equacoin-navbar .navbar-inverse .nav > li {
+	position:relative;
+}
+.equacoin-navbar .navbar-inverse .nav > li > a {
+	text-transform: uppercase;
+	font-size: 14px;
+	-webkit-transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	transition: all 0.2s;
+	color:#ffffff;
+	position:relative;
+	padding-bottom:4px;
+}
+.equacoin-navbar .navbar-inverse .nav > li > a:after{
+	content: '';
+    display: block;
+    height: 2px;
+    text-align: center;
+    left: 50%;
+	bottom:0;
+    width: 0;
+    float: none;
+    background: #fff;
+    transition: width 0.4s ease, background-color 0.4s ease;
+    -webkit-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    -o-transform: translateX(0%);
+    transform: translateX(0%);
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
+    margin: 6px auto;
+}
+.equacoin-navbar .navbar-inverse .nav > li:hover > a:after{width:100%;}
+.equacoin-navbar .navbar-inverse .nav > li > a:hover {
+	color: #F68922 !important;
+	background: transparent !important;
+}
+/* Contact popup */
+.Contact_help_section .modal {
+ background: rgba(0,0,0,1);
+}
+.Contact_help_section .modal-dialog {
+ width: 700px;
+ position: absolute;
+ margin: auto;
+ top: 0;
+ bottom: 0;
+ left: 0;
+ right: 0;
+ height: 50px;
+}
+.Contact_help_section .modal-header {
+ border: none;
+ padding: 0;
+}
+.Contact_help_section .modal-header .close {
+ margin-top: -2px;
+ font-size: 27px;
+ position: absolute;
+ top: -12px;
+ right: -12px;
+ opacity: 1;
+ background: #ffffff;
+ width: 30px;
+ height: 30px;
+ border-radius: 50%;
+ line-height: 30px;
+ text-align: center;
+}
+.Contact_help_section .modal-body {
+ text-align: center;
+ padding: 0px 0px 15px;
+}
+.Contact_help_section .modal-body p {
+ color: #000000;
+ font-size:19px;
+}
+.Contact_help_section .modal-body p a {
+ color: #F68922;
+}
+
+.no-transaction h4{
+	text-align: center;
+	padding:16px 0;
+}
+.logout-center{text-align:center;}
+.form-group .btn-submit-login, .form-group .btn-submit-login:focus{
+	border:1px solid #4658A7;
+	background:#4658A7;
+	color:#ffffff;
+	width:150px;
+	transition:0.5s all;
+	-webkit-transition:0.5s all;
+	-moz-transition:0.5s all;
+	font-size:16px;
+	}
+	.flt-right{float:right;}
+   .form-group .btn-submit-login:hover{background:#4658A7; border:1px solid #4658A7;}
+   .flt-right{float: right;}
+ @media(max-width:1024px) {
+.equacoin-contnt h2 {
+	font-size: 34px;
+}
+.equacoin-contnt h4 {
+	font-size: 20px;
+	line-height: 24px;
+}
+.equacoin-contnt p {
+	line-height: 22px;
+	font-size: 16px;
+}
+.more-bttn {
+	margin: 24px 0;
+}
+.time-remaining {
+	margin: 18px 0;
+	width: auto;
+}
+.time-remain-div ul li {
+	margin: 0 36px;
+}
+.time-remain-div ul li span {
+	font-size: 24px;
+	width: 90px;
+	height: 90px;
+	line-height: 90px;
+}
+.days-cunt {
+	margin-left: 14px;
+}
+.time-remain-div ul li p {
+	margin-left: 14px;
+}
+.login-seciton {
+	padding: 25px 25px;
+}
+}
+@media(max-width:768px) {
+.equacoin-contnt h2 {
+	font-size: 24px;
+}
+.equacoin-contnt h4 {
+	font-size: 18px;
+	line-height: 24px;
+}
+.equacoin-contnt p {
+	line-height: 22px;
+	font-size: 14px;
+}
+.more-bttn {
+	margin: 24px 0;
+}
+.time-remaining {
+	margin: 0;
+	width: auto;
+}
+.time-remain-div ul li {
+	margin: 0 6px;
+}
+.time-remain-div ul li span {
+	font-size: 24px;
+	width: 60px;
+	height: 60px;
+	line-height: 60px;
+}
+.days-cunt {
+	margin-left: 0px;
+}
+.time-remain-div ul li p {
+	margin-left: 0;
+}
+.login-seciton {
+	padding: 25px 25px;
+}
+}
+@media(max-width:640px) {
+.loing-landing-section {
+	display: inherit;
+	padding-top: 10px;
+}
+.equacoin-contnt h4 {
+	font-size: 22px;
+	line-height: 24px;
+}
+.equacoin-contnt p {
+	text-align: justify;
+	font-size: 14px;
+	line-height: 20px;
+}
+.more-bttn {
+	margin: 26px 0;
+}
+.more-bttn a {
+	font-size: 14px;
+	margin: 0 6px 0 0;
+	width: 130px;
+}
+.time-remaining {
+	margin: 0;
+	width: auto;
+}
+.time-remain-div ul li {
+	margin: 0 6px;
+}
+.time-remain-div ul li span {
+	font-size: 24px;
+	width: 60px;
+	height: 60px;
+	line-height: 60px;
+}
+.days-cunt {
+	margin-left: 0px;
+}
+.time-remain-div ul li p {
+	margin-left: 0;
+}
+.login-seciton {
+	padding: 25px 50px;
+}
+.login-title h1 {
+	font-size: 26px;
+}
+.login-title-token h1 {
+	font-size: 20px;
+	margin: 16px 0px;
+}
+.login-bttn button {
+	width: 100%;
+}
+}
+@media(max-width:360px) {
+.loing-landing-section {
+	display: inherit;
+	padding-top: 10px;
+}
+.equacoin-contnt h4 {
+	font-size: 22px;
+	line-height: 24px;
+}
+.equacoin-contnt p {
+	text-align: justify;
+	font-size: 14px;
+	line-height: 20px;
+}
+.more-bttn {
+	margin: 26px 0;
+}
+.more-bttn a {
+	font-size: 14px;
+	margin: 0 6px 0 0;
+	width: 130px;
+}
+.time-remaining {
+	margin: 0;
+	width: auto;
+}
+.time-remain-div ul li {
+	margin: 0 6px;
+}
+.time-remain-div ul li span {
+	font-size: 24px;
+	width: 60px;
+	height: 60px;
+	line-height: 60px;
+}
+.days-cunt {
+	margin-left: 0px;
+}
+.time-remain-div ul li p {
+	margin-left: 0;
+}
+.login-seciton {
+	padding: 25px 12px;
+}
+.login-title h1 {
+	font-size: 26px;
+}
+.login-title-token h1 {
+	font-size: 20px;
+	margin: 16px 0px;
+}
+.login-bttn button {
+	width: 100%;
+}
+}
+@media(max-width:320px) {
+.loing-landing-section {
+	display: inherit;
+	padding-top: 10px;
+}
+.equacoin-contnt h4 {
+	font-size: 22px;
+	line-height: 24px;
+}
+.equacoin-contnt p {
+	text-align: justify;
+	font-size: 14px;
+	line-height: 20px;
+}
+.more-bttn {
+	margin: 26px 0;
+}
+.more-bttn a {
+	font-size: 14px;
+	margin: 0 6px 0 0;
+	width: 130px;
+}
+.time-remaining {
+	margin: 0;
+	width: auto;
+}
+.time-remain-div ul li {
+	margin: 0 6px;
+}
+.time-remain-div ul li span {
+	font-size: 24px;
+	width: 60px;
+	height: 60px;
+	line-height: 60px;
+}
+.days-cunt {
+	margin-left: 0px;
+}
+.time-remain-div ul li p {
+	margin-left: 0;
+}
+.login-seciton {
+	padding: 25px 12px;
+}
+.login-title h1 {
+	font-size: 26px;
+}
+.login-title-token h1 {
+	font-size: 20px;
+	margin: 16px 0px;
+}
+.login-bttn button {
+	width: 100%;
+}
+}
+ 
+.market-update-right{float: left; width:100%;}
+.m_lss {
+    margin-bottom: 0;
+    margin-top: 10px;
+    font-size: 18px;
+    color: #ffffff;
+}
+.market-update-left h4{font-size: 16px !important;}

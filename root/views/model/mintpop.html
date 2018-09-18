@@ -1,0 +1,18 @@
+<html>
+    <div class="modal-body" submit-validate novalidate>
+    
+        <form name='popform'>
+    
+            Mint Tokens:
+            <input type='number' ng-model='mintedAmount' name='password' placeholder='Enter Token Count' required>
+            </br>
+            <!--    <p style='color:red' ng-show="submitted && popform.tokenbal.$invalid || popform.tokenbal.$invalid && !popform.tokenbal.$pristine" >Please enter wallet password.</p>  -->
+    
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" ng-click="ok(popform.$valid,mintedAmount)">OK</button>
+        <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+    </div>
+    </form>
+    
+    </html>

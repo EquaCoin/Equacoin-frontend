@@ -1,0 +1,191 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>User Dashboard</title>
+	<meta charset="utf-8">
+	
+</head>
+
+<body>
+
+	<section id="container">
+
+		<!--side-navbar-->
+		<header class="header white-bg">
+			<div class="logo">
+				<a href="javascript:void(0);">
+					<img src="root/images/newlogo.png" alt="logo">
+				</a>
+			</div>
+			<ul class="logut-div">
+				<li>
+					<a href="" ng-click='logout()'>
+						<i class="fa fa-user-circle-o" style="font-size: 20px; box-sizing: border-box;" aria-hidden="true"></i>Logout</a>
+				</li>
+			</ul>
+
+			<!-- <div class="logout-img"> <a href="javascript:void(0);">Logout</a> </div> -->
+		</header>
+
+		<!--side-navbar-->
+		<aside>
+			<div id="sidebar" class="side-nav">
+				<div class="nav-side-menu">
+					<div class="side-menu-down">
+						<div class="brand">Brand Logo</div>
+						<i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+						<div class="menu-list">
+							<ul id="menu-content" class="menu-content collapse out">
+								<li class="active">
+									<a href="/landing" ui-sref='landing'>
+										<i class="fa fa-home fa-lg"></i> Dashboard </a>
+								</li>
+								<li>
+									<a ui-sref='mytransaction' href="/mytransaction">
+										<i class="fa fa-money"></i> My Transaction </a>
+								</li>
+								<!-- ng-show='walletBalance > 0 && tokenbalance > 0' -->
+								<li >
+									<a ui-sref='equazone' href="/equazone">
+										<i class="fa fa-globe fa-lg"></i> Equa Zone</a>
+								</li>
+								<li>
+									<a href="/send" ui-sref='send'>
+										<i class="fa fa-user fa-lg"></i> Send</a>
+								</li>
+								<li>
+									<a ui-sref='support' href="/support">
+										<i class="fa fa-life-ring"></i> Support</a>
+								</li>
+								<!-- <li>
+									<a href="javascript:void(0);">
+										<i class="fa fa-user fa-lg"></i> Logout </a>
+								</li> -->
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</aside>
+		<section id="main-content">
+			<div class="wrapper_section">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<div class="equazone-title">
+						<h1>Welcome {{name}}</h1>
+					</div>
+				</div>
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<div style="color: #4658a7;" class="well well-sm">
+						<h6>
+							<b style="color: black;">Your Wallet ID:</b>
+							<b> {{walletAddress}}</b>
+						</h6>
+					</div>
+				</div>
+				<div class="ether-token">
+					<div class="com">
+
+						<div class="col-md-6">
+							<div class="ehter-blance bg-white">
+								<img style="float: left;" src="root/images/two.jpg" width="100px">
+								<h6 style="text-align: center;">
+									Ether Balance
+								</h6>
+								<h4 style="text-align: center;" class="">
+									{{walletBalance}}
+								</h4>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="ehter-blance bg-white">
+								<img style="float: left;" src="root/images/three.jpg" width="100px">
+								<h6 style="text-align: center;">
+									Token Balance
+								</h6>
+								<h4 style="text-align: center;" class="">
+									{{tokenbalance}}
+								</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="equacoin-purchase-section">
+					<div class="col-md-6">
+						<div class="bg-white full-wrap">
+							<form name='eathform' submit-validate no-validate>
+								<div>
+									<h4 class="bg-title">
+										Equa Coin
+									</h4>
+									<div class="bg-space">
+										<div class="equacoin-log text-center">
+											<img src="root/images/three.jpg" width="20%;">
+										</div>
+										<p class="m_top3">1 Equa Coin = 0.00144 Ether</p>
+										<div style="background: #35353c;" class="lft-move">
+
+
+											<h3 style="text-align: center;color:#ffffff;">EQC</h3>
+										</div>
+										<div class="lft-move">
+											<input type="number"  class="form-control" id="" name='amount' ng-pattern="/^[0-9]*$/"  ng-model='coindata.amount' placeholder=""
+											 required/>(Only Numbers Allowed)
+
+											 <!-- <p style="color:red" ng-show='!eathform.amount.$untouched && eathform.amount.$error.min'></p> -->
+										</div>
+										<!-- <div style="background: #35353c;" class="col-xs-12 m_bot2 m_top2 equa-purchase">
+											<h3 style="text-align: center;color:#ffffff;">
+												<button class="purchase-btn" ng-disabled="coindata.amount==null" ng-click='purchase(eathform.$valid,coindata.amount,eathform.amount.$error.pattern,walletBalance)'>Purchase Equacoin</button>
+											</h3>
+										</div> -->
+										<!-- <button type='submit' class="purchase-btn" ng-disabled="coindata.amount==null" ng-click='purchase(eathform.$valid,coindata.amount,eathform.amount.$error.pattern,walletBalance)'>Purchase Equacoin</button> -->
+										<input type="submit" class="purchase-btn"  ng-click='purchase(eathform.$valid,coindata.amount,eathform.amount.$error.pattern,walletBalance)'
+										value="Purchase Equacoin">
+									
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="bg-white full-wrap">
+							<div>
+
+								<h5 class="bg-title">
+									<b>Recent Transactions</b>
+								</h5>
+
+								<div class="bg-space1" ng-if="recentTransactions.length>0">
+									<ul class="list-box">
+										<li ng-repeat='lists in recentTransactions'>
+											<div>To Address:
+											<span>{{lists.toAddress }}</span></div>
+											<div ng-if='lists.transferAmount != 0'>
+													{{lists.paymentMode}}:
+													<span>{{lists.transferAmount }} </span>
+												  </div>
+												  
+												  <div ng-if='lists.transferAmount == 0'>
+													{{lists.paymentMode}}:
+													<span>{{lists.tokens }} </span>
+												  </div>
+										</li>
+										
+									</ul>
+								</div>
+								<div class="no-transaction" ng-if="recentTransactions.length == 0">
+									<h4>No Transactions yet</h4>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</section>
+</body>
+
+</html>

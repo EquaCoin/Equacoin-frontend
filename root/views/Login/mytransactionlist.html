@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>User Dashboard</title>
+  <meta charset="utf-8">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+  <!-- <link rel="stylesheet" href="css/style.css"> -->
+  <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <!-- <link href="css/bootstrap-select.css" rel="stylesheet" type="text/css"> -->
+
+
+ 
+</head>
+
+<body>
+  <section id="container">
+
+    <!--side-navbar-->
+    <header class="header white-bg">
+      <div class="logo">
+        <a href="javascript:void(0);">
+          <img src="root/images/newlogo.png" alt="logo">
+        </a>
+      </div>
+      <ul class="logut-div">
+        <li>
+          <a href="" ng-click='logout()'>
+            <i class="fa fa-user-circle-o" style="font-size: 20px; box-sizing: border-box;" aria-hidden="true"></i>Logout</a>
+        </li>
+      </ul>
+
+      <!-- <div class="logout-img"> <a href="javascript:void(0);">Logout</a> </div> -->
+    </header>
+
+    <!--side-navbar-->
+    <aside>
+      <div id="sidebar" class="side-nav">
+        <div class="nav-side-menu">
+          <div class="side-menu-down">
+            <div class="brand">Brand Logo</div>
+            <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+            <div class="menu-list">
+              <ul id="menu-content" class="menu-content collapse out">
+                <li>
+                  <a href="/landing" ui-sref='landing'>
+                    <i class="fa fa-home fa-lg"></i> Dashboard </a>
+                </li>
+                <li class="active">
+                  <a ui-sref='mytransaction' href="/mytransaction">
+                    <i class="fa fa-money"></i> My Transactions </a>
+                </li>
+                <li >
+                  <a ui-sref='equazone' href="/equazone">
+                    <i class="fa fa-globe fa-lg"></i> Equa Zone</a>
+                </li>
+                <li>
+										<a href="javascript:void(0);" ui-sref='send'>
+											<i class="fa fa-user fa-lg"></i> Send</a>
+									</li>
+                <li>
+                  <a ui-sref='support' href="/support">
+                    <i class="fa fa-life-ring"></i> Support</a>
+                </li>
+                <!-- <li>
+                    <a href="javascript:void(0);">
+                      <i class="fa fa-user fa-lg"></i> Logout </a>
+                  </li> -->
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <section id="main-content">
+      <div class="wrapper_section">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <div class="equazone-title">
+            <h1>My Transactions</h1>
+          </div>
+        </div>
+        <div class="my-transaction-header">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="mytransaction-title">
+              <div id="category_list" class="categor-section-wrap">
+                <div class="category-table">
+                  <div class="table-responsive">
+
+                    <div >
+
+                      <div class="transaction-table" ng-if='datalists.length>0'>
+                        <table class="table table-bordered table-striped">
+
+                          <th>From Address</th>
+                          <th>To Address</th>
+                          <th>Transferred Amount
+                          </th>
+                          <th>Tokens</th>
+                          <th>Payment Mode</th>
+                          <th>Date & Time</th>
+                          <th>Status</th>
+
+                          </thead>
+                          <tbody>
+                              <tr ng-repeat="datalist in datalists | pagination : currentPage*itemsPerPage | limitTo: itemsPerPage">
+                              <td>{{datalist.fromAddress}}</td> 
+                              <td>{{datalist.toAddress}}</td>
+                              <td>{{datalist.transferAmount}}</td>
+                              <td>{{datalist.tokens}}</td>
+                              <td>{{datalist.paymentMode}}</td>
+                              <td>{{datalist.createDate}}</td>
+                              <td>{{datalist.transactionStatus}}</td>
+                             
+                            </tr>
+
+
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="pagination-div" ng-if='datalists.length>0'>
+                        
+                                    <ul class="pagination">
+                                      <li ng-class="DisablePrevPage()">
+                                        <a href ng-click="prevPage()">« Prev</a>
+                                      </li>
+                                      <li ng-repeat="n in range()" ng-class="{active: n == currentPage}" ng-click="setPage(n)">
+                                        <a href="">{{n+1}}</a>
+                                      </li>
+                                      <li ng-class="DisableNextPage()">
+                                        <a href ng-click="nextPage()">Next »</a>
+                        
+                                      </li>
+                                    </ul>
+                        
+                                  </div>
+
+                    </div>
+                    <div ng-if='datalists.length==0'>
+                     <h4>No Transactions Yet
+                     </h4> 
+                    </div>
+                    <div class="clearfix"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+</body>
+
+</html>

@@ -1,0 +1,95 @@
+<html>
+<div class="create-proposal-modal">
+    <div class="modal-header">
+        <button type="button" class="close" ng-click="cancel()">×</button>
+        <h4 class="modal-title">View Proposal</h4>
+    </div>
+    <div class="modal-body">
+        <div class="create-form">
+            <form name="proposalform" id="proposalform" novalidate enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="category">Status:</label>
+                    <input type="text" class="form-control" name="proposalCategory" ng-model="proposal.status" readonly required>
+                </div>
+                <div class="form-group">
+                    <label for="title">Proposal Title:</label>
+                    <input type="text" class="form-control" name="proposalTitle" ng-model="proposal.proposalTitle" readonly required>
+                </div>
+                <div class="form-group">
+                    <label for="category">Proposal Category:</label>
+                    <input type="text" class="form-control" name="proposalCategory" ng-model="proposal.ProposalCategory" readonly required>
+                </div>
+                <!-- <div class="form-group">
+                   <label for="category">Payment Type:</label>
+                     <input type="text" class="form-control" name="proposalCategory" ng-model="proposal.paymentMode" readonly required>
+                </div> -->
+                <div class="form-group">
+                    <label for="amount">Proposal Amount:</label>
+                    <input type="text" class="form-control" name="proposalAmount" readonly onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57"
+                        ng-model="proposal.proposalAmount" autocomplete="off" required ng-pattern="/^[0-9]{1,7}$/">
+                </div>
+                <div class="form-group">
+                    <label for="createdby">Proposal Created by:</label>
+                    <input type="text" class="form-control" name="proposalCreatedBy" ng-model="proposal.proposalCreatedByName" required readonly>
+                </div>
+                <div class="form-group">
+                    <div class="col-lg-6 start-date">
+                        <div class="form-group">
+                            <label for="startdate">Start Date:</label>
+                            <input type="text"  class="form-control" readonly name="startDates" ng-model="proposal.startDates" autocomplete="off"
+                                required>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 start-padding-rt">
+                        <div class="form-group">
+                            <label for="enddate">End Date:</label>
+                            <input type="text"  class="form-control" readonly name="endDates" ng-model="proposal.endDates" autocomplete="off"
+                                required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group" ng-if="proposal.proposalDetailsLink != null">
+                    <label for="category">proposalDetails Link:</label>
+                    <input type="text" class="form-control" name="proposalDetailsLink" ng-model="proposal.proposalDetailsLink" readonly required>
+                </div>
+                <div class="form-group">
+                    <div class="col-lg-6  start-date">
+                        <h1>
+                            <a href={{proposal.proposalDOC}} download={ {proposal.proposalDOC}}.jpg target="_blank">
+                                Download document
+                            </a>
+                        </h1>
+                    </div>
+                </div>
+               
+
+                <!-- <div class="form-group">
+                        <div class="col-lg-6  start-date">
+                            <div class="form-group">
+                                <label for="details">Proposal Details:</label>
+                                <input type="text" class="form-control" name="proposalDetails" ng-model="proposal.proposalDetails" autocomplete="off" required>
+                                <p style='color:red' ng-if="proposalform.$submitted && proposalform.proposalDetails.$error.required" class="help-block">Please Enter Details.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 start-padding-rt">
+                            <div class="form-group">
+                                <label for="upload">File Upload:</label>
+                                <div class="upload-btn-wrapper">
+                                    <button class="upload-btn">Upload a file</button>
+                                    <input type="file" files-input ng-model="fileArray" required name="proposalDoc">
+                                </div>
+                                <p style='color:red' ng-if="proposalform.$submitted && proposalform.proposalDoc.$error.required" class="help-block">Please Upload file.</p>
+                            </div>
+                        </div>
+                    </div> -->
+
+
+
+            </form>
+        </div>
+    </div>
+
+</div>
+
+</html>

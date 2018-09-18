@@ -1,0 +1,118 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html ng-app="routerApp">
+
+<head>
+    <style>
+        .navbar {
+            border-radius: 0;
+        }
+        #loaderDiv {
+   position: fixed;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   left: 0;
+   z-index: 1100;
+   background-color: white;
+   opacity: .6;
+}
+
+
+
+    </style>
+
+    <!-- css -->
+
+    
+
+    <link rel="icon" href="root/images/title-icon.png">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="root/css/toaster.css">
+    <link rel="stylesheet" href="root/css/style.css">
+    <link rel="stylesheet" href="root/css/formstyle.css">
+   
+     <link rel="stylesheet" href="root/css/stylesignup.css">
+    <link rel="stylesheet" href="root/css/formstylesignup.css">
+    <link rel="stylesheet" href="root/css/userdashboard.css">
+    <link rel="stylesheet" href="root/css/supstyle.css">
+    <link rel="stylesheet" href="root/css/support.css">
+
+    <!-- <link rel="stylesheet" href="root/css/admindas.css"> -->
+    <link rel="stylesheet" href="root/css/createcoin.css">
+    <link rel="stylesheet" href="root/css/listcoin.css">
+    <link rel="stylesheet" href="root/css/admindashboard.css">
+    <link rel="stylesheet" href="root/css/equazone_style.css">
+    
+    <link href="root/css/bootstrap-select.css" rel="stylesheet" type="text/css">
+    
+     <!--loader -->
+	 <link rel="stylesheet" href="https://cdn.rawgit.com/codekraft-studio/angular-page-loader/master/dist/angular-page-loader.css">
+     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+     
+    
+
+    <!-- js-->
+	   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script> 
+	  <script src=" https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.js"> </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angularjs-toaster/2.0.0/toaster.js"></script>
+	<script src="root/scripts/spinner.js"></script>
+	<script src="root/scripts/animate.js"></script>
+    
+    
+    <script src="https://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.10.0.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"> </script>
+	
+	<script type="text/javascript" src="https://cdn.rawgit.com/codekraft-studio/angular-page-loader/master/dist/angular-page-loader.min.js"></script>
+    <!--controllers-->
+   
+
+    <script src="root/scripts/controller/clientapp.js"></script>
+    <script src="root/scripts/service/service.js"></script>
+
+    <script src="root/scripts/controller/logincontroller.js"></script>
+    
+    <script src="root/scripts/controller/support.js"></script>
+    <script src="root/scripts/controller/equazonecontroller.js"></script>
+    
+    <script src="root/scripts/controller/controller.js"></script>
+    <script src="root/scripts/controller/lancontroller.js"></script>
+    <script src="root/scripts/controller/transactionlist.js"></script>
+
+    <script src="root/scripts/Admin_controllers/admindashboard.js"></script>
+    
+    <script src="root/scripts/Admin_controllers/admintransactions.js"></script>  
+    <script src="root/scripts/Admin_controllers/equazoneadmin.js"></script> 
+</head>
+
+<body>
+
+  
+    <!-- NAVIGATION -->
+    <div>
+          
+		
+  
+  <div class="spinner" ng-show="loading"> 
+      </div>
+			<toaster-container toaster-options="{'time-out': 4000 ,'animation-class': 'toast-top-center'}"></toaster-container>
+			<treasure-overlay-spinner active='spinner.active'>
+     </treasure-overlay-spinner>
+		
+	
+		
+        <ui-view>
+               
+        </ui-view>
+    </div>
+
+</body>
+
+</html>
+

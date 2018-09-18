@@ -1,0 +1,140 @@
+html,body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Open Sans', sans-serif;
+}
+.f_left {
+	float: left!important;
+}
+.f_right {
+	float: right!important;
+}
+.m_top1 {
+	margin-top: 10px;
+}
+.m_top2 {
+	margin-top: 20px;
+}
+.m_top3 {
+	margin-top: 30px;
+}
+.m_top70{
+	margin-top: 70px;
+}
+.m_bot1 {
+	margin-bottom: 10px;
+}
+.m_top2 {
+	margin-bottom: 20px;
+}
+.m_top3 {
+	margin-bottom: 30px;
+}
+.m_top70{
+	margin-bottom: 70px;
+}
+.com {
+	float: left;
+	width: 100%;
+}
+.wrapper {
+	max-width: 1500px;
+	width: 100%;
+	margin: 0 auto;
+}
+.text_center {
+	float: left;
+	width: 100%;
+	text-align: center;
+}
+.text_left {
+	float: left;
+	width: 100%;
+	text-align: left;
+}
+.text_right {
+	float: left;
+	width: 100%;
+	text-align: right;
+}
+.bg_black {
+	background: #35353d;
+}
+.white_text {
+	color: #ffffff;
+}
+/* .nav>li {
+	background: #35353d!important;
+}
+a {
+    color: white!important;
+}
+.nav>li>a:focus, .nav>li>a:hover {
+    text-decoration: none;
+    background-color: #212121!important;
+}
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+    background-color: black!important;
+} */
+.bottom {
+	position: absolute;
+	background: ebeff2;
+    right: 0;
+    height:45px;
+    border-top: 1px solid ebeff2;
+	text-align: center;
+}
+.border {
+	border-bottom: 5px solid #000;
+	border-top: 0px;
+	border-left: 0px;
+	border-right: 0px;
+}
+@media only screen and (min-width: 300px) {
+	.sidenav bg_black {
+		height: 400px;
+	}
+}
+@media only screen and (max-width: 700px) {
+    .footer {
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			padding: 10px;
+			font-size: 0.9em;
+			text-align: center;
+		}
+	.footer_border {
+		border-top:1px;border-left: 0;border-right: 0;border-bottom: 0;border-style: inset;
+		}
+}
+@media (min-width: 300px) and (max-width:700px) {
+	.col-sm-2 {
+		height: 500px!important;
+	}
+	.width {
+	width: 15%;
+	}
+	.small_width {
+		width: 10%;
+	}
+	.width_last {
+		width: 12%;
+	}
+	.col-sm-10 {
+		height: 1000px!important;
+	}
+	.footer {
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			padding: 10px;
+			font-size: 0.9em;
+			text-align: center;
+		}
+	.footer_border {
+		border-top:1px;border-left: 0;border-right: 0;border-bottom: 0;border-style: inset;
+		}
+}

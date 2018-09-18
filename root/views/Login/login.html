@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Equacoin - Login</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+	<style>
+		body {
+			background: url(root/images/header.jpg) no-repeat center center/cover;
+			padding-bottom: 50px;
+		}
+
+		.center {
+			margin-top: 50px;
+		}
+
+		.modal-header {
+			padding-bottom: 5px;
+		}
+
+		.modal-footer {
+			padding: 0;
+		}
+
+		.modal-footer .btn-group button {
+			height: 40px;
+			border-top-left-radius: 0;
+			border-top-right-radius: 0;
+			border: none;
+			border-right: 1px solid #ddd;
+		}
+
+		.modal-footer .btn-group:last-child>button {
+			border-right: 0;
+		}
+	</style>
+
+</head>
+
+<body>
+	<div class="bg-body">
+		<div class="equacoin-navbar">
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<div class="col-md-12">
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+							<a class="navbar-brand" href="#">
+								<img src="root/images/logo.png" width="50">
+							</a>
+						</div>
+						<div class="collapse navbar-collapse" id="myNavbar">
+							<ul class="nav navbar-nav navbar-right">
+								<li>
+									<a href="javascript:void(0);" data-toggle="modal" data-target="#aboutus">Abstract</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);" data-toggle="modal" data-target="#squarespaceModal">Team</span>
+									</a>
+								</li>
+								<li>
+									<a href="https://equazine.blogspot.in/" target="_blank">News</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);" data-toggle="modal" data-target="#Contact_help">Contact</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);" data-toggle="modal" data-target="#eqc">How to purchase EQC?</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</nav>
+		</div>
+
+		<div class="container">
+			<div class="row">
+				<div class="loing-landing-section">
+					<div class="col-md-7">
+						<div class="equacoin-contnt white_text">
+							<h2>EquaCoin</h2>
+							<h4>A Token To Found Business Into a Democratic Ecosystem
+							</h4>
+							<p>EquaCoin is a crypto currency that is designed to support democratic principles. The self-explaining name comes from
+								the synthesis of ‘Equality’ and ‘Coin’.
+								<a href="javascript:void(0);" data-toggle="modal" data-target="#aboutus">More Info...</a>
+							</p>
+
+							<div class="more-bttn">
+
+								<a class="btn" href="root/images/whitepaper.pdf" target="_blank">WhitePaper</a>
+							</div>
+							<!-- <div class="time-remain-div">
+								<div class="time-remaining">Time Remaining </div>
+								<ul style="text-align: center;">
+								 <li>
+									<span class="days yellow-text">0</span>
+												<p class="timeRefDays timedescription days-cunt">days</p>			   
+								 </li>
+									<li>
+									<span style="background: #297fb8;"class="hours yellow-text">4</span>
+												<p class="timeRefHours timedescription">hours</p>			   
+								 </li>
+								 <li>
+									<span style="background: #e84c3d;"class="minutes yellow-text">58</span>
+												<p class="timeRefMinutes timedescription">minutes</p>			   
+								 </li>
+								 <li>
+									<span style="background: #95a5a5;"class="seconds yellow-text">44</span>
+												<p class="timeRefSeconds timedescription">seconds</p>			   
+								 </li>
+								</ul>
+							 </div> -->
+							<div class="social-link">
+								<ul>
+									<li>
+										<a href="http://t.me/equaCoin" target="_blank">
+											<i class="fa fa-telegram"></i>
+										</a>
+									</li>
+									<li>
+										<a href="http://www.facebook.com/equacoin/" target="_blank">
+											<i class="fa fa-facebook"></i>
+										</a>
+									</li>
+									<li>
+										<a href="http://www.twitter.com/equacoin/" target="_blank">
+											<i class="fa fa-twitter"></i>
+										</a>
+									</li>
+									<li>
+										<a href="https://www.reddit.com/r/Wavesplatform/comments/7wvtil/some_info_on_equacoin/" target="_blank">
+											<i class="fa fa-reddit-alien"></i>
+										</a>
+									</li>
+									<li>
+										<a href="https://bitcointalk.org/index.php?topic=2317470.0" target="_blank">
+											<i class="fa fa-bitcoin"></i>
+										</a>
+									</li>
+									<li>
+										<a class="svgg" href="https://coinranking.com/coin/equacoin-equa" target="_blank">
+											<img src="root/images/coinranking.svg">
+										</a>
+									</li>
+								</ul>
+							</div>
+
+						</div>
+					</div>
+					<div class="col-md-5 col-sm-6 col-xs-12 black_text">
+						<div class="login-seciton bg-contrast">
+							<div>
+								<div class="text-center login-title">
+									<a href="#" title="Equacoin">
+										<img src="root/images/logo.png" width="60px;" /> </a>
+									<h1>EquaCoin</h1>
+								</div>
+								<div class="simple-token-form login-title-token">
+									<h1 class="text-center">Login for the Token Sale</h1>
+									<form class="user-form" name='loginform' id="loginform" novalidate>
+										<div class="form-group">
+											<label class="m-bot6" for="email">email address</label>
+											<input type="text" name="emailId" value="" class="form-control" ng-model='user.emailId' autocomplete="off" / required>
+											<p style='color:red' ng-if="loginform.$submitted && loginform.emailId.$error.required" class="help-block">Please Enter Email-id.</p>
+
+
+										</div>
+										<div class="form-group">
+											<label class="m-bot6" for="password">password</label>
+											<span class="pull-right minimum-characters">Minimum 8 Characters</span>
+											<div style="position: relative">
+												<input type="password" name="password" id="password" value="" class="form-control" ng-model='user.password' autocomplete="off"
+												/ required>
+												<p style='color:red' ng-if="loginform.$submitted && loginform.password.$error.required" class="help-block">Please Enter Password.</p>
+
+											</div>
+											<div class="zxcvbn-group"></div>
+
+										</div>
+
+										<div class="form-group">
+											<!-- <a style="background:orange;" href="" disabled="checkError" class="btn-common btn-grey form-btn-transparent" id="" title="Login" ng-click='loginsubmit(loginform.$valid,user)' >login</a> -->
+											<input type="submit" class="btn-common btn-submit-login btn-grey form-btn-transparent" ng-click="loginsubmit(loginform.$valid,user)"
+											 value="Login">
+										</div>
+
+										<div class="user-form-footer login-page-footer">
+											<div class="user-form-footer login-page-footer">
+												<div class="create-account" style="margin-top: 0;color:#29235f; ">
+													<a href="" ng-click='forgot()'>
+														<u style="color:#29235f;">Forgot your password?</u>
+													</a>
+													<a class="flt-right" ui-sref='signup' href="/signup">
+														<u style="padding-left: 35px;color:#29235f;">Register</u>
+													</a>
+												</div>
+											</div>
+										</div>
+										<!-- <div class="forget_style">
+											<a  href="" ng-click='forgot()'>
+												<u style="padding-left: 35px;color:#29235f;">Forgot your password?</u>
+											</a>
+										</div> -->
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!---Modal Popup Team-->
+	<div class="team-modal">
+		<div class="modal fade" id="squarespaceModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">
+							<span aria-hidden="true">×</span>
+							<span class="sr-only">Close</span>
+						</button>
+						<h3 class="modal-title" id="lineModalLabel">Team</h3>
+					</div>
+					<div class="modal-body">
+						<div class="modal-team-member">
+							<div class="team-section">
+								<div class="col-md-2 col-sm-2 col-xs-12">
+									<div class="team-image">
+										<img class="img-circle" src="root/images/nadia-la-banca.jpg" alt="image">
+									</div>
+								</div>
+								<div class="col-md-10 col-sm-10 col-xs-12">
+									<div class="team-member">
+										<h2>NADIA LA BANCA (CFO)</h2>
+										<p>Experienced CFO with proven record of establishing cross-functional partnerships to deliver enhanced results. Strategic
+											leader driving operations within marketing, sales, analytics and business development areas.</p>
+									</div>
+								</div>
+							</div>
+							<div class="team-section">
+								<div class="col-md-2 col-sm-2 col-xs-12">
+									<div class="team-image">
+										<img class="img-circle" src="root/images/giovanni-ciallella.jpg" alt="image">
+									</div>
+								</div>
+								<div class="col-md-10 col-sm-10 col-xs-12">
+									<div class="team-member">
+										<h2>GIOVANNI CIALLELLA (CTO)</h2>
+										<p>Serial Entrepreneur and Innovator with dozens of Start-ups. Co-Founder of JobRapido (Sold to Daily Mail), Emotilogic,
+											Film in Now (Video streaming platform) Ubiter, MagicPed and many others includes Banking apps. Expert in Online
+											Marketing and Product Management. Mobile Marketing and Billing. Advanced Tracking Technologies on Toolbars and
+											Plugins on most browsers (EmotiLogic). Security platforms and Advertising performance. </p>
+										<p>Had Developed in 2004 one of the very first Softphones: Piperito. In the early 90s owned and managed several BBSs
+											and worked actively in Premium Content Services.</p>
+									</div>
+								</div>
+							</div>
+							<div class="team-section">
+								<div class="col-md-2 col-sm-2 col-xs-12">
+									<div class="team-image">
+										<img class="img-circle" src="root/images/marco-saba.jpg" alt="image">
+									</div>
+								</div>
+								<div class="col-md-10 col-sm-10 col-xs-12">
+									<div class="team-member">
+										<h2>MARCO SABA (CEO)</h2>
+										<p>Is an Italian forensic accountant, an economist specialized on money creation matters. He is a member of the Scientific
+											Advisory Board of Vollgeld in Switzerland and an academic at UniMoscow. Founder of EquaCoin. Chief researcher
+											of the Italian Center for Monetary Studies during ten years (2005-2015), he wrote three books on money and banking.</p>
+										<p>He was a scholar of Gianni Degli Antoni, Giacinto Auriti, and a follower of the late John Nash Jr. Marco has designed
+											this promising crypto currency so that it will empower democracy by decentralizing power and establishing new,
+											democratic monetary policies.</p>
+									</div>
+								</div>
+							</div>
+							<div class="team-section">
+								<div class="col-md-2 col-sm-2 col-xs-12">
+									<div class="team-image">
+										<img class="img-circle" src="root/images/eliahu-gal-or.jpg" alt="image">
+									</div>
+								</div>
+								<div class="col-md-10 col-sm-10 col-xs-12">
+									<div class="team-member">
+										<h2>ELIAHU GAL-OR (CIO)</h2>
+										<p>International Innovator and inventor, has several patents integrated in third party technologies, In the late nineties,
+											had designed one of the very first models of decentralized accounting technology (today we would call it BlockChain)
+											Has developed several Institution Relations, in Israel, USA and India. </p>
+									</div>
+								</div>
+							</div>
+							<!--   <div class="team-section">
+					<div class="col-md-2 col-sm-2 col-xs-12">
+					  <div class="team-image"><img class="img-circle" src="root/images/glauco-verdoia.jpg" alt="image"></div>
+					</div>
+					<div class="col-md-10 col-sm-10 col-xs-12">
+					  <div class="team-member">
+						<h2>GLAUCO VERDOIA (ADVISOR)</h2>
+						<p>Over 25 years experience in Corporate Management and Finance. International expat
+						  experience in France, Ukraine, China and Australia. Specialized in project development and
+						  financing, structured finance and trading. 6 years with a global PE fund based in London and
+						  NY. Focused on International projects. Currently Director at Euro-IB Investment Bank, based in
+						  London, Frankfurt, Rome. </p>
+					  </div>
+					</div>
+				  </div> -->
+							<div class="team-section">
+								<div class="col-md-2 col-sm-2 col-xs-12">
+									<div class="team-image">
+										<img class="img-circle" src="root/images/giovanni-prignano.jpg" alt="image">
+									</div>
+								</div>
+								<div class="col-md-10 col-sm-10 col-xs-12">
+									<div class="team-member">
+										<h2>GIOVANNI PRIGNANO (ADVISOR)</h2>
+										<p>Serial Entrepreneur since 1979. Created several IT startups and developed various Telecommunication project, then
+											integrated in larger corporations. Expert in Peer2Peer technologies and Voip. Created and started in 1994 the
+											company FLASHNET, one of the first European Internet providers. In the last ten years he has been focused in optimizing
+											efficiency and logistics in several E-commerce portals, including Futek.it.</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="team-section">
+								<div class="col-md-2 col-sm-2 col-xs-12">
+									<div class="team-image">
+										<img class="img-circle" src="root/images/francisco-incerpi.jpg" alt="image" height="160px">
+									</div>
+								</div>
+								<div class="col-md-10 col-sm-10 col-xs-12">
+									<div class="team-member">
+										<h2>FRANCISCO INCERPI (ADVISOR)</h2>
+										<p>
+											Mr. Francisco Incerpi Montbrun has more than 30 years of relevant professional experience at international level. Throughout
+											his career he has developed several innovative ideas for the financing and coordination of development projects.
+											Mr. Incerpi has extensive experience in the Southern African region having worked in different countries, Angola,
+											Mozambique, Malawi, Democratic Republic of the Congo, Tanzania and Botswana. In Botswana he worked within the
+											SADC Management team where he coordinated at the Regional Investment Strategic Development Plan and put the basis
+											for an investment platform for the entire SADC region. This experience allows him to understand the challenges
+											and opportunities of financing large scale projects with new monetary tools.
+										</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="team-section">
+								<div class="col-md-2 col-sm-2 col-xs-12">
+									<div class="team-image">
+										<img src="root/images/logo-colan.png" alt="image">
+									</div>
+								</div>
+								<div class="col-md-10 col-sm-10 col-xs-12">
+									<div class="team-member">
+										<h2>Colan Infotech Pvt Ltd – Nasscom listed company. (Technology Partner)</h2>
+										<p>It is a customer centric technology firm offering key services in the areas of cloud services and analytics, mobile
+											and web technology, IoT, AI, Blockchain and ERP solutions. We revel in an environment of open collaboration as
+											we partner with businesses to create complete ecosystems of connected experiences. Our creative minds and technical
+											proficiency are our primary engines as we clearly map out your stated and implied needs to deliver agile, functional
+											and aesthetic solutions.</p>
+										<p>Over 360 employees full time including 60 Engineers specialized in AI, Block-Chain and IoT.
+											<a class="link-more" href="https://colaninfotech.com/" target="_blank">More Info...</a>
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--Abstract-->
+	<div class="abstract-aboutus">
+		<div class="modal fade" id="aboutus" role="dialog">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">About Us</h4>
+					</div>
+					<div class="modal-body">
+						<div class="about-us-content">
+							<p>EquaCoin is a crypto currency that is designed to support democratic principles. The self-explaining name comes from
+								the synthesis of ‘Equality’ and ‘Coin’.</p>
+
+							<p>Our Mission is to build and constantly improve an innovative monetary instrument that will allow each person who owns
+								at least one EquaCoin, to vote and participate in a Democratic Marketplace. EquaCoin will distribute a free wallet
+								with one coin in it, to most of the European population (then distribution will be done to the rest of the world)
+								through some online and offline marketing campaigns.</p>
+							<p>In particular we focus on the monetary policy of currency creation and its distribution. We are building our wallet
+								also with the possibility for users to post a project and vote for others. “One head, one vote” Changing the world
+								one EquaCoin at a time - Together we can do what no one of us can do alone. Equacoin will finance project that will
+								be chosed and voted online.
+							</p>
+							<p>Regardless if people would have millions of coins or just one, they will have equal voting power.</p>
+							<p>A first version of wallet, with limited functionalities, will be available online before November 30, 2017. In the
+								coming weeks, some new technologies will be implemented with an upgrade of the wallet, including biometric security
+								authentication.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--How to Purchase EQC-->
+	<div class="Purchase-eqc">
+		<div class="modal fade" id="eqc" role="dialog">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">How To Purchase EQC</h4>
+					</div>
+					<div class="modal-body">
+						<div class="Purchase-content">
+							<ul>
+								<li>
+									If you already have Ethers (ETH), you can buy directly EquaCoins by registering on
+									<a href="www.equacoin.com" target="_blank">www.equacoin.com</a>
+								</li>
+								<li>
+									If you have other Cryptos, you need to go to any exchange to convert them into Ether, then buy EquaCoins
+								</li>
+								<li>
+									If you don’t own any Cryptos, you need to buy Ether from any exchange, then go to
+									<a href="www.equacoin.com" target="_blank">www.equacoin.com</a> and register.
+								</li>
+								<li>
+									If you want to buy using Wire Transfer Please Contact :
+									<a href="www.equacoin.com" target="_blank">info@equacoin.com</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--contact popup-->
+	<div class="Contact_help_section">
+		<div class="modal fade" id="Contact_help" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+					</div>
+					<div class="modal-body">
+						<p>For Any queries or Support Please drop an Email To:
+							<a href="www.equacoin.com" target="_blank">info@equacoin.com</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

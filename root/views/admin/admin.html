@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Admin Dashboard</title>
+</head>
+
+<body>
+	<div class="loader-bg" style="display: none;">
+		<div class="loader"></div>
+	</div>
+	<section id="container">
+		<!--side-navbar-->
+		<header class="header white-bg">
+			<div class="logo">
+				<a href="javascript:void(0);">
+					<img src="root/images/newlogo.png" alt="logo">
+				</a>
+			</div>
+			<ul class="logut-div">
+                <li>
+                    <a href="" ng-click='logout()'>
+                        <i class="fa fa-user-circle-o" style="font-size: 20px; box-sizing: border-box;" aria-hidden="true"></i>Logout</a>
+                </li>
+            </ul>
+			<!-- <div class="logout-img"> <a href="javascript:void(0);">Logout</a> </div> -->
+		</header>
+
+		<!--side-navbar-->
+		<aside>
+			<div id="sidebar" class="side-nav">
+				<div class="nav-side-menu">
+					<div class="side-menu-down">
+						<div class="brand">Brand Logo</div>
+						<i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+						<div class="menu-list">
+							<ul id="menu-content" class="menu-content collapse out">
+								<li style="background: black;width: 100%;" class="active">
+									<a href="/admin/dashboard" ui-sref='admin'>
+										<i class="fa fa-home fa-lg"></i> Dashboard </a>
+								</li>
+								<li>
+									<a ui-sref='admintransaction' href="/admin/transactionlist">
+										<i class="fa fa-money fa-lg"></i> My Transaction </a>
+								</li>
+								<li>
+									<a href="/admin/mintList" ui-sref='mint'>
+										<i class="fa fa-life-ring"></i> Mint Tokens</a>
+								</li>
+
+								<li>
+									<a href="/admin/adminequazone" ui-sref='adminequazone'>
+										<i class="fa fa-globe fa-lg"></i> Equa Zone</a>
+								</li>
+								<!-- <li>
+									<a href="">
+										<i class="fa fa-life-ring"></i> Support</a>
+								</li> -->
+								<!-- <li>
+									<a href="" ng-click="logout()">
+										<i class="fa fa-user fa-lg"></i> Logout </a>
+								</li> -->
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</aside>
+		<section id="main-content">
+			<div class="wrapper_section">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<div class="equazone-title">
+						<h1>Dashboard</h1>
+
+					</div>
+					<div class="card">
+						<h5>
+							<span>Your Wallet Id:</span>0x680b926Dd2D75eD1F9fB196116Ad0660AdA10Ff9</h5>
+					</div>
+				</div>
+				<div class="market-updates">
+					<div class="col-md-3 market-update-gd">
+						<div style="background: #b94bd5;" class="market-update-block clr-block-2">
+							<div class=" market-update-left">
+								<h4 class="f_left" style="font-size: 20px;">Users</h4>
+								<img class="f_right" style="width: 50px;" src="root/images/1.png">
+							</div>
+							<div class=" market-update-right">
+								<h3 class="m_lss">{{usercountdata}}</h3>
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+					</div>
+					<div class="col-md-3 market-update-gd">
+						<div style="background: #374abe;" class="market-update-block clr-block-1">
+							<div class="market-update-left">
+								<h4 class="f_left" style="font-size: 20px;">Ether Balance</h4>
+								<img class="f_right" style="width: 45px;" src="root/images/2.png">
+							</div>
+							<div class="market-update-right">
+								<h3 class="m_lss">{{adminmainbalance}}</h3>
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+					</div>
+					<div class="col-md-3 market-update-gd">
+						<div style="background: #a8bc20;" class="market-update-block clr-block-3">
+							<div class="market-update-left">
+								<h4 class="f_left" style="font-size: 20px;">Total Tokens</h4>
+								<img class="f_right" style="width: 50px;" src="root/images/3.png">
+
+							</div>
+							<div class=" market-update-right">
+								<h3 class="m_lss">{{totaltokenbalance}}</h3>
+							</div>
+
+							<div class="clearfix"> </div>
+						</div>
+					</div>
+					<div class="col-md-3 market-update-gd">
+						<div style="background: #de981f;" class="market-update-block clr-block-2">
+							<div class=" market-update-left">
+								<h4 class="f_left" style="font-size: 20px;">Cancel Token</h4>
+								<a class="f_right" href="javascript:void(0);" data-toggle="modal" data-target="#myModal" ng-click="delete()">
+									<img style="color: #ffffff;width: 50px;" data-toggle="tooltip" title="Delete Token!" src="root/images/delete_last.png">
+								</a>
+							</div>
+							<div class=" market-update-right">
+								<h3 class="m_lss">{{burnTokens}}</h3>
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+					</div>
+					<div class="col-md-3 market-update-gd">
+						<div style="background: #f26f2f;" class="market-update-block clr-block-4">
+							<div class="market-update-left">
+								<h4 class="f_left" style="font-size: 20px;">Sold Tokens</h4>
+								<img class="f_right" style="width: 50px;" src="root/images/4.png">
+
+							</div>
+							<div class=" market-update-right">
+								<h3 class="m_lss">{{soldtokens}}</h3>
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+					</div>
+
+					<div class="col-md-3 market-update-gd">
+						<div style="background: #f44171;" class="market-update-block clr-block-3">
+							<div class="market-update-left">
+								<h4 class="f_left" style="font-size: 20px;"> Mint Token</h4>
+								<!-- <img class="f_right" style="width: 50px;" src="root/images/euro_last.png"> -->
+								<a class="f_right" href="javascript:void(0);" data-toggle="modal" data-target="#myModal" ng-click="mint()">
+									<img style="color: #ffffff;width: 50px;" data-toggle="tooltip" title="Mint Token!" src="root/images/mint_token.png">
+								</a>
+							</div>
+							<div class=" market-update-right">
+								<h3 class="m_lss">{{mintTokens}}</h3>
+							</div>
+
+							<div class="clearfix"> </div>
+						</div>
+					</div>
+				</div>
+				<br>
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 m_top3">
+					<div class="equazone-title">
+						<h1>EQC Transfer</h1>
+					</div>
+					<form class="form-horizontal" name='transferform' novalidate>
+						<div class="form-group">
+							<label class="control-label col-sm-3">Wallet Address</label>
+							<div class="col-sm-3">
+								<input type="text" class="form-control" id="toAddress" name="toAddress" ng-model='tokendata.toAddress' required>
+								<p style='color:red' ng-if="submitted && transferform.toAddress.$error.required" class="help-block">Please Enter Wallet Address.</p>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label col-sm-3" for="">Total Number of EQC</label>
+							<div class="col-sm-3">
+								<input type="number" class="form-control" id="requestToken" name="requestToken" ng-model='tokendata.requestToken' 
+								 required>
+								<p style='color:red' ng-if="submitted && transferform.requestToken.$error.required" class="help-block">Please Enter Token.</p>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<div class="col-sm-offset-3 col-sm-10">
+								<button type="submit" style="padding: 10px 50px;background: #b94bd5;" class="btn 
+     btn-default" ng-click="tokentransfer(transferform.$valid,transferform.requestToken.$error.pattern)">
+									<b style="color: white;">Send</b>
+								</button>
+							</div>
+
+						</div>
+					</form>
+				</div>
+
+			</div>
+		</section>
+	</section>
+</body>
+</html

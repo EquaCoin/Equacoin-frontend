@@ -1,0 +1,20 @@
+.supportFormBg{
+	width: 45%;
+    background: #ffd9a9;
+    margin: auto;
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.supportFormBg textarea{
+	height: 110px;
+}
+
+.supportFormBtn{
+    background: #35353c;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    text-align: center;
+}

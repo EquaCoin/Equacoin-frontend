@@ -1,0 +1,18 @@
+<html>
+    <div class="modal-body" submit-validate novalidate>
+            
+            <form name='popform'>
+                    <p>{{value}} Equacoin = {{finalval}} Ether </p><br/>
+                    
+                      Wallet Password:<input type='password' ng-model='walletPassword'name='password' required></br>
+                      <p style='color:red' ng-show="submitted && popform.range.$invalid || popform.range.$invalid && !popform.range.$pristine" >Please enter wallet password.</p>
+                      <p style='color:red' ng-if=tokenErrormessage!=''>{{tokenErrormessage}}</p>
+                
+          
+            
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" ng-click="ok(popform.$valid,walletPassword)">OK</button>
+        <button class="btn btn-warning" ng-click="cancel()">Cancel</button></div>
+    </form>
+    </html>

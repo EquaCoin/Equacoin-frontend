@@ -1,0 +1,127 @@
+<html>
+<div class="create-proposal-modal">
+    <div class="modal-header">
+        <button type="button" class="close" ng-click="cancel()">×</button>
+        <h4 class="modal-title">Create Proposal</h4>
+    </div>
+    <div class="modal-body">
+        <div class="create-form">
+            <form name="proposalform" id="proposalform" novalidate enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="title">Proposal Title:</label>
+                    <input type="text" class="form-control" name="proposalTitle" ng-model="proposal.proposalTitle" autocomplete="off" required>
+                    <p style='color:red' ng-if="proposalform.$submitted && proposalform.proposalTitle.$error.required" class="help-block">Please Enter title</p>
+                </div>
+                <div class="form-group">
+                    <label for="category">Proposal Category:</label>
+                    <input type="text" class="form-control" name="proposalCategory" ng-model="proposal.proposalCategory"  autocomplete="off" required>
+                    <p style='color:red' ng-if="proposalform.$submitted && proposalform.proposalCategory.$error.required" class="help-block">Please Enter Category.</p>
+                </div>
+                <div class="form-group">
+                    <label for="amount">Proposal Amount(EQUA):</label>
+                    <input type="text" class="form-control" name="proposalAmount" onpaste="return false;" onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57" ng-model="proposal.proposalAmount" autocomplete="off" required
+                        ng-pattern="/^[0-9]{1,7}$/">
+                    <p style='color:red' ng-if="proposalform.$submitted && proposalform.proposalAmount.$error.required" class="help-block">Please Enter amount.</p>
+                    <p style='color:red' ng-if="proposalform.$submitted && proposalform.proposalAmount.$error.pattern" class="help-block">Please Enter Valid amount.</p>
+                </div>
+                <div class="form-group">
+                    <label for="createdby">Proposal Created by:</label>
+                    <input type="text" class="form-control" name="proposalCreatedBy" ng-model="proposal.proposalCreatedBy" autocomplete="off"
+                        required readonly>
+                    <p style='color:red' ng-if="proposalform.$submitted && proposalform.proposalCreatedBy.$error.required" class="help-block">Please Enter Created by.</p>
+                </div>
+                <div class="form-group">
+                    <div class="col-lg-6 start-date">
+                        <div class="form-group">
+                            <label for="startdate">Start Date:</label>
+                            <input type="date" format="yyyy-MM-dd"  class="form-control" max="9999-01-01" onkeydown="return false"   min='{{currentdate}}' name="startDate" ng-model="proposal.startDate" autocomplete="off" required readonly>
+                            <p style='color:red' ng-if="proposalform.$submitted && proposalform.startDate.$error.required" class="help-block">Please Enter Start date.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 start-padding-rt">
+                        <div class="form-group">
+                            <label for="enddate">End Date:</label>
+                            <input type="date" format="yyyy-MM-dd" class="form-control" onkeydown="return false" max="9999-01-01" name="endDate" ng-model="proposal.endDate" autocomplete="off" required>
+                            <p style='color:red' ng-if="proposalform.$submitted && proposalform.endDate.$error.required" class="help-block">Please Enter End date.</p>
+                        </div>
+                    </div>
+                   </div>
+                  
+
+                <div class="form-group">
+                    <div class="col-lg-6  start-date">
+                        <div class="form-group">
+                            <label for="details">Proposal Details:</label>
+                            <input type="text" class="form-control" name="proposalDetails" ng-model="proposal.proposalDetails" autocomplete="off" required>
+                            <p style='color:red' ng-if="proposalform.$submitted && proposalform.proposalDetails.$error.required" class="help-block">Please Enter Details.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 start-padding-rt">
+                        <div class="form-group">
+                            <label for="upload">File Upload:</label>
+                            <div class="upload-btn-wrapper">
+                                <button class="upload-btn">Upload a file</button>
+                                <input type="file" files-input ng-model="fileArray"  ng-change='selsectfile(fileArray)' required name="proposalDoc">
+                            </div>
+                            <p>{{selectedFile}}</p>
+                            <p style='color:red' ng-if="proposalform.$submitted && proposalform.proposalDoc.$error.required" class="help-block">Please Upload file.</p>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="createdby">ProposalDetails Link:</label>
+                        <input type="text" class="form-control" name="proposalDetailsLink" ng-model="proposal.proposalDetailsLink" autocomplete="off"
+                            >
+                    </div>
+                <!-- <div class="form-group">
+                    <div class="col-lg-6  start-date">
+                        <div class="form-group">
+                            <label>Select Type</label>
+                            <select type="text" class="form-control" ng-options="x.value for x in transation track by x.value" name="transactionType"
+                                ng-model="proposal.transType" placeholder="Wallet Adderss" ng-change="selestcoin()" required>
+                            </select>
+                            <p class="error" ng-show="proposalform.$submitted && proposalform.transactionType.$error.required">Please Select Transaction Type</p>
+                        </div>
+                    </div>
+
+                </div> -->
+
+                <div class="modal-footer">
+                    <button type="submit" class="btn-submit-updload" ng-click="ok(proposalform.$valid,proposal,fileArray)">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>
+<script>
+       
+    $(document).ready(function(){
+        var myitem = document.getElementById("myItemDate");
+        alert(myitem);
+        if (myitem.addEventListener)
+    {
+
+        // IE9, Chrome, Safari, Opera
+        myitem.addEventListener("mousewheel", MouseWheelHandler, false);
+        // Firefox
+        myitem.addEventListener("DOMMouseScroll", MouseWheelHandler, false);
+    }
+    // IE 6/7/8
+    else
+    {
+        myitem.attachEvent("onmousewheel", MouseWheelHandler);
+    }
+    
+    });
+   
+    function MouseWheelHandler(e)
+    {
+        // cross-browser wheel delta
+        var e = window.event || e; // old IE support
+        var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
+    
+        return false;
+    }
+    </script>
+</html>
